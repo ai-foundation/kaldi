@@ -15,7 +15,7 @@ variables:
   docker_build: &docker_build
     run:
       name: "Docker build"
-      command: bash docker/build.sh
+      command: docker build --build-arg MAKE_NUM_THREADS --build-arg OPENBLAS_NUM_THREADS --build-arg OPENBLAS_COMMIT -t kaldi .
 
   docker_tag_and_publish: &docker_tag_and_publish
     run:
