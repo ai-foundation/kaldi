@@ -50,6 +50,6 @@ workflows:
           filters:
             branches:
               only:
-                - 5.4
+                - "5.4"
                 - master
 
